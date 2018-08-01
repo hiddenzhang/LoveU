@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>新年祝福</title>
+<!--引入开始-->
+ 
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<!--引入结束-->
+ 
+<audio src="musics/致爱丽丝.mp3" autoplay="autoplay">
+您使用的浏览器不支持HTML5!
+</audio>
+</head>  
+<body oncontextmenu="return false" ondragstart="return false" style="zoom: 1;">
+ 
+<!-- 代码开始 -->
+
+<div id="mainDiv">
+    <div id="content" style="width: 1110px; height: 625px; margin-top: 10px; margin-left: 119.5px;">
+        <div id="code" style="margin-top: 50px;">
+            <span class="comments">我怕，</span><br>
+            除夕晚上的祝福太多,<br>
+            <span class="comments">你会不在意我的问候。</span><br>
+            我怕，<br>
+            <span class="comments">初一早上的鞭炮太吵，</span><br>
+            你会听不到我的祝福 ，<br>
+            <span class="comments">我怕，</span><br>
+            初二中午的菜肴太香，<br>
+            <span class="comments"> 你会看不见我的短信。</span><br>
+             所以选择现在这个时候给你送来祝福，<br>
+            <span class="comments">在这里给您以及家人拜个早年</span><br>
+            <br>
+            我想说:<br>
+             
+           
+            <span class="comments">猪年大吉</span>;<br>
+            <span class="comments">猪年发大财！</span>
+            </span></span></span></span></span></span></div>
+            <div id="loveHeart">
+            <div id="messages" style="display: block;">
+            <canvas id="garden"></canvas>
+             
+                <div id="words">
+                <div id="messages">
+                     
+                    <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                   小崔: 新年快乐<br/>
+                    <div class="signature"></div>
+                </div>
+ 
+ 
+            <div id="words">
+            </div>
+            </div>   
+                 
+             
+        </div>
+    </div>
+</div>
+<!-- 代码结束 -->
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2001, 1, 1);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+ 
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "您使用的浏览器不支持HTML5!";
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+ 
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+ 
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script> 
+</body>
+</html>
